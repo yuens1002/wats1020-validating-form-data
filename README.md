@@ -41,10 +41,17 @@ stretch goals:
 * Invoke the [Bootstrap Tooltips](http://getbootstrap.com/javascript/#tooltips)
   component to make the question mark icons more nicely display their tips when
   users hover over them.
-* Rework your validation implementation so that each field is validated as soon
-  as the user tries to fill in information.
 * Enhance the styling of your errors and alerts so that users experience a very
   elegant validation process.
 * Enhance the styling and layout of the form itself so users experience a very
   elegant `form`.
 
+## Solution files
+
+Solutions are provided in `js/solution.js` and `/solution.html` for the purpose
+of helping you get un-stuck if you get stuck. Please refrain from consulting the
+solutions too much so you aren't just copying from one file to another.
+
+Solutions are especially helpful to look at once you've actually succeeded at the
+assignment. Seeing how somebody else approached the same task is very helpful
+for improving your coding skills.
