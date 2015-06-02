@@ -20,7 +20,10 @@ that the validation plugin wants things set up. Review the tutorials, docs, and
 demos available on [jqueryvalidation.org](http://jqueryvalidation.org/).
 
 More information about jQuery Validation can be found on their website:
-[jqueryvalidation.org](http://jqueryvalidation.org/).
+[jqueryvalidation.org](http://jqueryvalidation.org/). You may wish to consult the
+[validation rules docs](http://jqueryvalidation.org/documentation/#link-list-of-built-in-validation-methods), 
+as well as the list of additional rules that comes after the default rules. The additional rules Javascript
+file is included in this repository, so you can use those methods with no additional work.
 
 ## Basic Requirements
 
