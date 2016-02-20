@@ -5,8 +5,17 @@
    ========================================================================== */
 
 
+body {
+	margin-top: 8rem;
+}
 
+.error {
+	color: red;
+}
 
+.valid {
+	color: forestgreen;
+}
 
 
 

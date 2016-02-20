@@ -10,14 +10,7 @@
         <meta name="description" content="An example of inline form validation.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -30,7 +23,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Form Validation</a>
+          <a class="navbar-brand" href="#">Form Validation Exercise</a>
         </div>
       </div>
     </nav>
@@ -38,11 +31,11 @@
     <div class="container">
       <p class="lead">Please note: This form is only for validation demonstration purposes. Do not enter real payment information; please use imaginary data.</p>
       <form class="form-horizontal" role="form" action="thank-you.html" method="get" id="order-form">
-      <!-- TODO: Add a general validation check so that any field contained in a `div.form-group. required` will be required to have information when the user submits the form. -->
+      <!-- TODO: Add a general validation check so that any field contained in a `div.form-group .required` will be required to have information when the user submits the form. -->
         <fieldset>
-          <legend>Your Information</legend>
+          <legend>Your Information <small>(* fields are required)</small></legend>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-name"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span> Your Name</label>
+			  <label class="col-sm-3 control-label" for="your-name"><a href="#" data-toggle="tooltip" title="2 char min, no #s pls"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span></a> Your Name*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name">
             </div>
@@ -52,7 +45,7 @@
                  -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-address">Street Address</label>
+            <label class="col-sm-3 control-label" for="your-address">Street Address*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Your Street Address">
             </div>
@@ -67,7 +60,7 @@
             </div>
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-city">City</label>
+            <label class="col-sm-3 control-label" for="your-city">City*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-city" id="your-city" placeholder="Your City">
             </div>
@@ -76,9 +69,9 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-state"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span> State</label>
+			  <label class="col-sm-3 control-label" for="your-state"><a href="#" data-toggle="tooltip" title="Enter a valid 2 letter US state abbreviation pls"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span></a> State*</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State">
+              <input type="text" maxlength="2" class="form-control" name="your-state" id="your-state" placeholder="Your State">
             </div>
             <!-- TODO: Make validation for state according to these rules:
                   * Field must not be blank
@@ -87,7 +80,7 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-zip"><span class="glyphicon glyphicon-question-sign" title="US ZIP code only."></span> ZIP</label>
+			  <label class="col-sm-3 control-label" for="your-zip"><a href="#" data-toggle="tooltip" title="Enter a valid 5 digit US Zip code please"><span class="glyphicon glyphicon-question-sign" title="US ZIP code only."></span></a> ZIP*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code">
             </div>
@@ -101,7 +94,7 @@
         <fieldset>
           <legend>Payment</legend>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="card-holder-name"><span class="glyphicon glyphicon-question-sign" title="First and last name shown on card."></span> Name on Card</label>
+			  <label class="col-sm-3 control-label" for="card-holder-name"><a href="#" data-toggle="tooltip" title="As it appears on your card"><span class="glyphicon glyphicon-question-sign" title="First and last name shown on card."></span></a> Name on Card*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
             </div>
@@ -111,7 +104,7 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="card-number"><span class="glyphicon glyphicon-question-sign" title="Test card number: 0000 0000 0000 0000"></span> Card Number</label>
+			  <label class="col-sm-3 control-label" for="card-number"><a href="#" data-toggle="tooltip" title="16 digit card #"><span class="glyphicon glyphicon-question-sign" title="Test card number: 0000 0000 0000 0000"></span></a> Card Number*</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
             </div>
@@ -125,12 +118,12 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+            <label class="col-sm-3 control-label" for="expiry-month">Expiration Date*</label>
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
-                    <option>Month</option>
+                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month" title="Please select the expiration month of your credit card">
+                    <option value="">Month</option>
                     <option value="01">Jan (01)</option>
                     <option value="02">Feb (02)</option>
                     <option value="03">Mar (03)</option>
@@ -146,7 +139,8 @@
                   </select>
                 </div>
                 <div class="col-xs-3">
-                  <select class="form-control" name="expiry-year">
+                  <select class="form-control" for="expiry-year" name="expiry-year" title="Please select the expiration year of your credit card">
+					<option value="">Year</option>  
                     <option value="15">2015</option>
                     <option value="16">2016</option>
                     <option value="17">2017</option>
@@ -165,9 +159,9 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="cvv"><span class="glyphicon glyphicon-question-sign" title="Three-digit code from back of card."></span> Card CVV</label>
+			  <label class="col-sm-3 control-label" for="cvv"><a href="#" data-toggle="tooltip" title="3 digit # on the back for visa/master/discover, 4 digit # on the front right corner for AMEX"><span class="glyphicon glyphicon-question-sign" title="Three-digit code from back of card."></span></a> Card CVV*</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+              <input maxlength="4" type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
             </div>
             <!-- TODO: Make validation for CVV according to these rules:
                   * Field must not be blank
@@ -179,12 +173,12 @@
         <fieldset>
           <legend>Additional Information</legend>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="shipping-method">Shipping Method</label>
+            <label class="col-sm-3 control-label" for="shipping-method">Shipping Method*</label>
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method">
-                    <option>Select One</option>
+                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method" title="Please select a shipping method using the dropdown menu">
+                    <option value="">Select One</option>
                     <option value="Ground">Ground</option>
                     <option value="Air">Air</option>
                     <option value="Sea">Sea</option>
@@ -201,7 +195,7 @@
           <div class="form-group">
             <label class="col-sm-3 control-label" for="comments">Special Instructions</label>
             <div class="col-sm-9">
-              <textarea cols="80" rows="8" class="form-control" name="comments" id="comments" placeholder="Comments"></textarea>
+              <textarea  maxlength="500" cols="80" rows="8" class="form-control" name="comments" id="comments" placeholder="Comments"></textarea>
             </div>
             <!-- TODO: Make validation for street address according to these rules:
                   * Field may be blank
@@ -211,11 +205,11 @@
           </div>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-              <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span> Check Out!</button>
+              <button id="submit" type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span> Check Out!</button>
             </div>
           </div>
         </fieldset>
-      </form>
+      </form>	
     </div>
     <div class="container">
       <hr>
@@ -228,7 +222,7 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
-
+        <script src="js/vendor/additional-methods.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
